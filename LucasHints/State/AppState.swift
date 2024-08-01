@@ -7,17 +7,17 @@
 
 import Foundation
 
-struct AppState
+class AppState: ObservableObject
 {
     var categories: [Category]
-    var activeGlyphs: [UIGlyph] = []
+    @Published var activeGlyphs: [UIGlyph] = []
 
     init() {
         self.categories = seedCategories()
         regenerateUiGlyphs()
     }
 
-    mutating func regenerateUiGlyphs() {
+    func regenerateUiGlyphs() {
         self.activeGlyphs = categories
             .shuffled()
             .prefix(3)

@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct GlyphDetails: View {
+    @Environment(\.colorScheme) var colorScheme
+
     var uiGlyph: UIGlyph
 
     var body: some View {
-        VStack {
-            HStack {
+            ZStack {
                 Image(uiGlyph.glyph.assetName)
                     .resizable()
                     .scaledToFit()
@@ -23,9 +24,8 @@ struct GlyphDetails: View {
                 .cornerRadius(20) /// make the background rounded
                 .overlay( /// apply a rounded border
                     RoundedRectangle(cornerRadius: 20)
-                        .stroke(.black, lineWidth: 3)
+                        .stroke(colorScheme == .dark ? Color.white : Color.black, lineWidth: 3)
                 )
-        }
     }
 }
 
@@ -37,7 +37,7 @@ struct GlyphDetails: View {
             category:
                 Category(
                     name: "Weather",
-                    color: Color(hue: 0.1, saturation: 0.1, brightness: 0.95),
+                    color: Color(hue: 0.8, saturation: 0.15, brightness: 0.95),
                     glyphs: []
                 )
         )
