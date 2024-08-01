@@ -14,6 +14,12 @@
 		DDE7A7072C572185007B6B37 /* LucasHintsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE7A7062C572185007B6B37 /* LucasHintsTests.swift */; };
 		DDE7A7112C572185007B6B37 /* LucasHintsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE7A7102C572185007B6B37 /* LucasHintsUITests.swift */; };
 		DDE7A7132C572185007B6B37 /* LucasHintsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE7A7122C572185007B6B37 /* LucasHintsUITestsLaunchTests.swift */; };
+		DDE7A7212C5BCF62007B6B37 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE7A7202C5BCF62007B6B37 /* Category.swift */; };
+		DDE7A7232C5BCF75007B6B37 /* Glyph.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE7A7222C5BCF75007B6B37 /* Glyph.swift */; };
+		DDE7A7262C5BD229007B6B37 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE7A7252C5BD229007B6B37 /* AppState.swift */; };
+		DDE7A7292C5BD46F007B6B37 /* CategorySeeder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE7A7282C5BD46F007B6B37 /* CategorySeeder.swift */; };
+		DDE7A72C2C5BD5BA007B6B37 /* GlyphDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE7A72B2C5BD5BA007B6B37 /* GlyphDetails.swift */; };
+		DDE7A72E2C5BD822007B6B37 /* UIGlyph.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE7A72D2C5BD822007B6B37 /* UIGlyph.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +50,12 @@
 		DDE7A70C2C572185007B6B37 /* LucasHintsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LucasHintsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDE7A7102C572185007B6B37 /* LucasHintsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LucasHintsUITests.swift; sourceTree = "<group>"; };
 		DDE7A7122C572185007B6B37 /* LucasHintsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LucasHintsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DDE7A7202C5BCF62007B6B37 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		DDE7A7222C5BCF75007B6B37 /* Glyph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Glyph.swift; sourceTree = "<group>"; };
+		DDE7A7252C5BD229007B6B37 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		DDE7A7282C5BD46F007B6B37 /* CategorySeeder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySeeder.swift; sourceTree = "<group>"; };
+		DDE7A72B2C5BD5BA007B6B37 /* GlyphDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlyphDetails.swift; sourceTree = "<group>"; };
+		DDE7A72D2C5BD822007B6B37 /* UIGlyph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGlyph.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +106,10 @@
 		DDE7A6F42C572181007B6B37 /* LucasHints */ = {
 			isa = PBXGroup;
 			children = (
+				DDE7A72A2C5BD58B007B6B37 /* Views */,
+				DDE7A7272C5BD461007B6B37 /* Seeders */,
+				DDE7A7242C5BD21A007B6B37 /* State */,
+				DDE7A71F2C5BCF51007B6B37 /* Models */,
 				DDE7A6F52C572181007B6B37 /* LucasHintsApp.swift */,
 				DDE7A6F72C572181007B6B37 /* ContentView.swift */,
 				DDE7A6F92C572184007B6B37 /* Assets.xcassets */,
@@ -125,6 +141,40 @@
 				DDE7A7122C572185007B6B37 /* LucasHintsUITestsLaunchTests.swift */,
 			);
 			path = LucasHintsUITests;
+			sourceTree = "<group>";
+		};
+		DDE7A71F2C5BCF51007B6B37 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DDE7A7202C5BCF62007B6B37 /* Category.swift */,
+				DDE7A7222C5BCF75007B6B37 /* Glyph.swift */,
+				DDE7A72D2C5BD822007B6B37 /* UIGlyph.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DDE7A7242C5BD21A007B6B37 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				DDE7A7252C5BD229007B6B37 /* AppState.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		DDE7A7272C5BD461007B6B37 /* Seeders */ = {
+			isa = PBXGroup;
+			children = (
+				DDE7A7282C5BD46F007B6B37 /* CategorySeeder.swift */,
+			);
+			path = Seeders;
+			sourceTree = "<group>";
+		};
+		DDE7A72A2C5BD58B007B6B37 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DDE7A72B2C5BD5BA007B6B37 /* GlyphDetails.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +308,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDE7A6F82C572181007B6B37 /* ContentView.swift in Sources */,
+				DDE7A7262C5BD229007B6B37 /* AppState.swift in Sources */,
+				DDE7A72E2C5BD822007B6B37 /* UIGlyph.swift in Sources */,
+				DDE7A72C2C5BD5BA007B6B37 /* GlyphDetails.swift in Sources */,
 				DDE7A6F62C572181007B6B37 /* LucasHintsApp.swift in Sources */,
+				DDE7A7232C5BCF75007B6B37 /* Glyph.swift in Sources */,
+				DDE7A7212C5BCF62007B6B37 /* Category.swift in Sources */,
+				DDE7A7292C5BD46F007B6B37 /* CategorySeeder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
