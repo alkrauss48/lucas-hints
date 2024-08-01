@@ -20,6 +20,7 @@
 		DDE7A7292C5BD46F007B6B37 /* CategorySeeder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE7A7282C5BD46F007B6B37 /* CategorySeeder.swift */; };
 		DDE7A72C2C5BD5BA007B6B37 /* GlyphDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE7A72B2C5BD5BA007B6B37 /* GlyphDetails.swift */; };
 		DDE7A72E2C5BD822007B6B37 /* UIGlyph.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE7A72D2C5BD822007B6B37 /* UIGlyph.swift */; };
+		DDE7A7302C5C0110007B6B37 /* InfoSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE7A72F2C5C0110007B6B37 /* InfoSheet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		DDE7A7282C5BD46F007B6B37 /* CategorySeeder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySeeder.swift; sourceTree = "<group>"; };
 		DDE7A72B2C5BD5BA007B6B37 /* GlyphDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlyphDetails.swift; sourceTree = "<group>"; };
 		DDE7A72D2C5BD822007B6B37 /* UIGlyph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGlyph.swift; sourceTree = "<group>"; };
+		DDE7A72F2C5C0110007B6B37 /* InfoSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				DDE7A72B2C5BD5BA007B6B37 /* GlyphDetails.swift */,
+				DDE7A72F2C5C0110007B6B37 /* InfoSheet.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				DDE7A7232C5BCF75007B6B37 /* Glyph.swift in Sources */,
 				DDE7A7212C5BCF62007B6B37 /* Category.swift in Sources */,
 				DDE7A7292C5BD46F007B6B37 /* CategorySeeder.swift in Sources */,
+				DDE7A7302C5C0110007B6B37 /* InfoSheet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,6 +486,7 @@
 				DEVELOPMENT_TEAM = K25K24NK79;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Lucas Hints";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -514,6 +519,7 @@
 				DEVELOPMENT_TEAM = K25K24NK79;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Lucas Hints";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
