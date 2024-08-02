@@ -22,7 +22,7 @@ struct InfoSheet: View {
                     Text("Wondering what to do next in your creative storytelling experience, or do you need a bit of advice with some real life decisions?")
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 15, trailing: 0))
 
-                    Text("**Lucas Hints** will help by giving you 3 unique icons across different categories. Want a fresh set? Just pull down to refresh!")
+                    Text("**Lucas Hints** will help by giving you 3 icons across different categories. Want a fresh set? Just pull down to refresh - there's over 250,000 unique combinations of icons!")
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 15, trailing: 0))
 
                     Text("What do the icons actually mean? That's for you to interpret and decide!")
