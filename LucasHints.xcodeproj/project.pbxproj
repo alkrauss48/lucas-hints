@@ -58,6 +58,7 @@
 		DDE7A72B2C5BD5BA007B6B37 /* GlyphDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlyphDetails.swift; sourceTree = "<group>"; };
 		DDE7A72D2C5BD822007B6B37 /* UIGlyph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGlyph.swift; sourceTree = "<group>"; };
 		DDE7A72F2C5C0110007B6B37 /* InfoSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoSheet.swift; sourceTree = "<group>"; };
+		DDE7A7312C5C7D9E007B6B37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +109,7 @@
 		DDE7A6F42C572181007B6B37 /* LucasHints */ = {
 			isa = PBXGroup;
 			children = (
+				DDE7A7312C5C7D9E007B6B37 /* Info.plist */,
 				DDE7A72A2C5BD58B007B6B37 /* Views */,
 				DDE7A7272C5BD461007B6B37 /* Seeders */,
 				DDE7A7242C5BD21A007B6B37 /* State */,
@@ -486,6 +488,7 @@
 				DEVELOPMENT_TEAM = K25K24NK79;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LucasHints/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Lucas Hints";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -497,8 +500,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = aaronkrauss.LucasHints;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aaronkrauss.lucashints;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -519,6 +522,7 @@
 				DEVELOPMENT_TEAM = K25K24NK79;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LucasHints/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Lucas Hints";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -530,8 +534,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = aaronkrauss.LucasHints;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aaronkrauss.lucashints;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
