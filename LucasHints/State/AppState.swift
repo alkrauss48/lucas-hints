@@ -8,12 +8,12 @@
 import Foundation
 
 class AppState: ObservableObject {
-
     var categories: [Category]
     @Published var activeGlyphs: [UIGlyph] = []
 
     init() {
         self.categories = seedCategories()
+
         regenerateUiGlyphs()
     }
 
@@ -38,10 +38,4 @@ class AppState: ObservableObject {
             regenerateUiGlyphs()
         }
     }
-}
-
-var appState = AppState()
-
-func getAppState() -> AppState {
-    return appState
 }

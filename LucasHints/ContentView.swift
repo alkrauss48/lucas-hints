@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var appState = getAppState()
+    @StateObject var appState = AppState()
     @State private var isPresentingInfo: Bool = false
 
     var body: some View {
