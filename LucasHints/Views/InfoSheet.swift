@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct InfoSheet: View {
+    @Binding var isPresented: Bool
+
     var body: some View {
         NavigationView {
             ScrollView {
@@ -70,11 +72,18 @@ struct InfoSheet: View {
                 }
                 .padding()
                 .navigationTitle("Lucas Hints")
+                .toolbar {
+                    Button(action: {
+                        isPresented = false
+                    }, label: {
+                        Text("Close")
+                    })
+                }
             }
         }
     }
 }
 
 #Preview {
-    InfoSheet()
+    InfoSheet(isPresented: .constant(true))
 }

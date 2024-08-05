@@ -9,31 +9,64 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var appState = AppState()
-    @State private var isPresentingInfo: Bool = false
+    @State private var isPresentingInfo = false
 
     var body: some View {
-        NavigationView {
-            ScrollView {
-                ZStack {
-                    Spacer().containerRelativeFrame([.horizontal, .vertical])
-                    VStack {
-                        ForEach(appState.activeGlyphs, id: \.self.glyph.assetName) { uiGlyph in
-                            GlyphDetails(uiGlyph: uiGlyph)
-                                .padding(EdgeInsets(top: 0, leading: 0, bottom: 30, trailing: 0))
+        GeometryReader { metrics in
+            NavigationView {
+                ScrollView {
+                    ZStack {
+                        Spacer().containerRelativeFrame([.horizontal, .vertical])
+                            if metrics.size.width < metrics.size.height {
+                                verticalDisplay(width: metrics.size.width)
+                            } else {
+                                horizontalDisplay(width: metrics.size.height)
+                            }
                         }
-                    }
+                    .frame(maxWidth: .infinity)
+                }.refreshable {
+                    appState.regenerateUiGlyphs()
+                }.toolbar {
+                    Button(action: {
+                        isPresentingInfo.toggle()
+                    }, label: {
+                        Image(systemName: "info.circle")
+                    })
+                }.sheet(isPresented: $isPresentingInfo) {
+                    InfoSheet(isPresented: $isPresentingInfo)
                 }
-            }.refreshable {
-                appState.regenerateUiGlyphs()
-            }.toolbar {
-                Button(action: {
-                    isPresentingInfo.toggle()
-                }, label: {
-                    Image(systemName: "info.circle")
-                })
-            }.sheet(isPresented: $isPresentingInfo) {
-                InfoSheet()
-                    .presentationDragIndicator(.visible)
+            }
+        }
+    }
+
+    func verticalDisplay(width: CGFloat) -> some View {
+        VStack {
+            ForEach(appState.activeGlyphs, id: \.self.glyph.assetName) { uiGlyph in
+                GlyphDetails(width: width * 0.3, uiGlyph: uiGlyph)
+                    .padding(
+                        EdgeInsets(
+                            top: 0,
+                            leading: 0,
+                            bottom: 30,
+                            trailing: 0
+                        )
+                    )
+            }
+        }
+    }
+
+    func horizontalDisplay(width: CGFloat) -> some View {
+        HStack {
+            ForEach(appState.activeGlyphs, id: \.self.glyph.assetName) { uiGlyph in
+                GlyphDetails(width: width * 0.3, uiGlyph: uiGlyph)
+                    .padding(
+                        EdgeInsets(
+                            top: 0,
+                            leading: 0,
+                            bottom: 0,
+                            trailing: uiGlyph == appState.activeGlyphs.last ? 0 : 30
+                        )
+                    )
             }
         }
     }

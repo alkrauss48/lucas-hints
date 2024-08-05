@@ -10,16 +10,21 @@ import SwiftUI
 struct GlyphDetails: View {
     @Environment(\.colorScheme) var colorScheme
 
+    var width: CGFloat
     var uiGlyph: UIGlyph
 
     var body: some View {
             ZStack {
-                Image(uiGlyph.glyph.assetName)
-                    .resizable()
-                    .scaledToFit()
-                    .padding()
-                    .frame(width: 120, height: 120, alignment: .center)
-            }
+                    Image(uiGlyph.glyph.assetName)
+                        .resizable()
+                        .scaledToFit()
+                        .padding()
+                        .frame(
+                            width: width,
+                            height: width,
+                            alignment: .center
+                        )
+                }
                 .background(uiGlyph.category.color)
                 .cornerRadius(20) /// make the background rounded
                 .overlay( /// apply a rounded border
@@ -31,6 +36,7 @@ struct GlyphDetails: View {
 
 #Preview {
     GlyphDetails(
+        width: 200,
         uiGlyph: UIGlyph(
             glyph:
                 Glyph(assetName: "star"),
