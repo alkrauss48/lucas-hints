@@ -15,11 +15,11 @@ func seedCategories() -> [Category] {
         seedElemental(),
         seedEmotion(),
         seedFood(),
-        seedInventory(),
+        seedWeather(),
         seedLandscape(),
         seedTool(),
         seedTransportation(),
-        seedWeather(),
+        seedInventory(),
         seedCelebration(),
         seedGesture(),
         seedSign()
@@ -121,21 +121,21 @@ private func seedFood() -> Category {
     )
 }
 
-private func seedInventory() -> Category {
+private func seedWeather() -> Category {
     Category(
-        name: "Inventory",
+        name: "Weather",
         color: Color(hue: 6 / 13.0, saturation: 0.1, brightness: 0.95),
         glyphs: [
-            Glyph(assetName: "backpack"),
-            Glyph(assetName: "bandage"),
-            Glyph(assetName: "book"),
-            Glyph(assetName: "compass"),
-            Glyph(assetName: "guitar"),
-            Glyph(assetName: "jewel"),
-            Glyph(assetName: "lantern"),
-            Glyph(assetName: "logs"),
-            Glyph(assetName: "potion"),
-            Glyph(assetName: "pen")
+            Glyph(assetName: "planet"),
+            Glyph(assetName: "moon"),
+            Glyph(assetName: "partly-cloudy"),
+            Glyph(assetName: "rain"),
+            Glyph(assetName: "rainbow"),
+            Glyph(assetName: "comet"),
+            Glyph(assetName: "star"),
+            Glyph(assetName: "sun"),
+            Glyph(assetName: "sunrise"),
+            Glyph(assetName: "thunderstorm")
         ]
     )
 }
@@ -197,21 +197,21 @@ private func seedTransportation() -> Category {
     )
 }
 
-private func seedWeather() -> Category {
+private func seedInventory() -> Category {
     Category(
-        name: "Weather",
+        name: "Inventory",
         color: Color(hue: 10 / 13.0, saturation: 0.1, brightness: 0.95),
         glyphs: [
-            Glyph(assetName: "planet"),
-            Glyph(assetName: "moon"),
-            Glyph(assetName: "partly-cloudy"),
-            Glyph(assetName: "rain"),
-            Glyph(assetName: "rainbow"),
-            Glyph(assetName: "comet"),
-            Glyph(assetName: "star"),
-            Glyph(assetName: "sun"),
-            Glyph(assetName: "sunrise"),
-            Glyph(assetName: "thunderstorm")
+            Glyph(assetName: "backpack"),
+            Glyph(assetName: "bandage"),
+            Glyph(assetName: "book"),
+            Glyph(assetName: "compass"),
+            Glyph(assetName: "guitar"),
+            Glyph(assetName: "jewel"),
+            Glyph(assetName: "lantern"),
+            Glyph(assetName: "logs"),
+            Glyph(assetName: "potion"),
+            Glyph(assetName: "pen")
         ]
     )
 }

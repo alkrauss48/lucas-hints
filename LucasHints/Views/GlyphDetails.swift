@@ -43,7 +43,7 @@ struct GlyphDetails: View {
             category:
                 Category(
                     name: "Weather",
-                    color: Color(hue: 0.8, saturation: 0.15, brightness: 0.95),
+                    color: Color(hue: 6 / 13.0, saturation: 0.1, brightness: 0.95),
                     glyphs: []
                 )
         )
