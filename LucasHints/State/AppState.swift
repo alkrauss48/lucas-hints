@@ -7,8 +7,8 @@
 
 import Foundation
 
-class AppState: ObservableObject
-{
+class AppState: ObservableObject {
+
     var categories: [Category]
     @Published var activeGlyphs: [UIGlyph] = []
 

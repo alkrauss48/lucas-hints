@@ -28,9 +28,9 @@ struct ContentView: View {
             }.toolbar {
                 Button(action: {
                     isPresentingInfo.toggle()
-               }) {
-                   Image(systemName: "info.circle")
-               }
+                }, label: {
+                    Image(systemName: "info.circle")
+                })
             }.sheet(isPresented: $isPresentingInfo) {
                 InfoSheet()
                     .presentationDragIndicator(.visible)

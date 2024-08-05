@@ -8,8 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct Category
-{
+struct Category {
     var name: String
     var color: Color
     var glyphs: [Glyph]
