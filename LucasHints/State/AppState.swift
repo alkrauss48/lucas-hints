@@ -22,13 +22,13 @@ class AppState: ObservableObject {
         let oldGlyphAssetNames = Set(self.activeGlyphs.map { $0.glyph.assetName })
 
         // Generate new active glyphs.
-        self.activeGlyphs = categories
+        let newGlyphs = categories
             .shuffled()
             .prefix(3)
             .map { UIGlyph(glyph: $0.glyphs.randomElement()!, category: $0)}
 
         // Verify that the new glyphs are all different than the original ones.
-        let notAllNewGlyphs = Set(self.activeGlyphs.map { $0.glyph.assetName })
+        let notAllNewGlyphs = Set(newGlyphs.map { $0.glyph.assetName })
             .intersection(oldGlyphAssetNames)
             .count > 0
 
@@ -36,6 +36,9 @@ class AppState: ObservableObject {
         // then regenerate the glyphs again.
         if notAllNewGlyphs {
             regenerateUiGlyphs()
+            return
         }
+
+        self.activeGlyphs = newGlyphs
     }
 }
