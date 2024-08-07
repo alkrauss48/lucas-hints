@@ -37,6 +37,7 @@ struct ContentView: View {
                 }
             }
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 
     func verticalDisplay(width: CGFloat) -> some View {
