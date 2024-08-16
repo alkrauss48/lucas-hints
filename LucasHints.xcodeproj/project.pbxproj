@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD9916EB2C6CFDA3008465D1 /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD9916EA2C6CFDA3008465D1 /* Stickers.xcassets */; };
+		DD9916EF2C6CFDA3008465D1 /* StickerPack.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = DD9916E82C6CFDA1008465D1 /* StickerPack.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		DDE7A6F62C572181007B6B37 /* LucasHintsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE7A6F52C572181007B6B37 /* LucasHintsApp.swift */; };
 		DDE7A6F82C572181007B6B37 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE7A6F72C572181007B6B37 /* ContentView.swift */; };
 		DDE7A6FA2C572184007B6B37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDE7A6F92C572184007B6B37 /* Assets.xcassets */; };
@@ -24,6 +26,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		DD9916ED2C6CFDA3008465D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DDE7A6EA2C572181007B6B37 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD9916E72C6CFDA1008465D1;
+			remoteInfo = StickerPack;
+		};
 		DDE7A7032C572185007B6B37 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DDE7A6EA2C572181007B6B37 /* Project object */;
@@ -40,7 +49,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		DD9916F32C6CFDA3008465D1 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				DD9916EF2C6CFDA3008465D1 /* StickerPack.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		DD9916E82C6CFDA1008465D1 /* StickerPack.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = StickerPack.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD9916EA2C6CFDA3008465D1 /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
+		DD9916EC2C6CFDA3008465D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DDE7A6F22C572181007B6B37 /* LucasHints.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LucasHints.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDE7A6F52C572181007B6B37 /* LucasHintsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LucasHintsApp.swift; sourceTree = "<group>"; };
 		DDE7A6F72C572181007B6B37 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -86,12 +112,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD9916E92C6CFDA1008465D1 /* StickerPack */ = {
+			isa = PBXGroup;
+			children = (
+				DD9916EA2C6CFDA3008465D1 /* Stickers.xcassets */,
+				DD9916EC2C6CFDA3008465D1 /* Info.plist */,
+			);
+			path = StickerPack;
+			sourceTree = "<group>";
+		};
 		DDE7A6E92C572181007B6B37 = {
 			isa = PBXGroup;
 			children = (
 				DDE7A6F42C572181007B6B37 /* LucasHints */,
 				DDE7A7052C572185007B6B37 /* LucasHintsTests */,
 				DDE7A70F2C572185007B6B37 /* LucasHintsUITests */,
+				DD9916E92C6CFDA1008465D1 /* StickerPack */,
 				DDE7A6F32C572181007B6B37 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -102,6 +138,7 @@
 				DDE7A6F22C572181007B6B37 /* LucasHints.app */,
 				DDE7A7022C572185007B6B37 /* LucasHintsTests.xctest */,
 				DDE7A70C2C572185007B6B37 /* LucasHintsUITests.xctest */,
+				DD9916E82C6CFDA1008465D1 /* StickerPack.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -185,6 +222,21 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		DD9916E72C6CFDA1008465D1 /* StickerPack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD9916F02C6CFDA3008465D1 /* Build configuration list for PBXNativeTarget "StickerPack" */;
+			buildPhases = (
+				DD9916E62C6CFDA1008465D1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StickerPack;
+			productName = StickerPack;
+			productReference = DD9916E82C6CFDA1008465D1 /* StickerPack.appex */;
+			productType = "com.apple.product-type.app-extension.messages-sticker-pack";
+		};
 		DDE7A6F12C572181007B6B37 /* LucasHints */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DDE7A7162C572185007B6B37 /* Build configuration list for PBXNativeTarget "LucasHints" */;
@@ -192,10 +244,12 @@
 				DDE7A6EE2C572181007B6B37 /* Sources */,
 				DDE7A6EF2C572181007B6B37 /* Frameworks */,
 				DDE7A6F02C572181007B6B37 /* Resources */,
+				DD9916F32C6CFDA3008465D1 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				DD9916EE2C6CFDA3008465D1 /* PBXTargetDependency */,
 			);
 			name = LucasHints;
 			productName = LucasHints;
@@ -248,6 +302,9 @@
 				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
+					DD9916E72C6CFDA1008465D1 = {
+						CreatedOnToolsVersion = 15.2;
+					};
 					DDE7A6F12C572181007B6B37 = {
 						CreatedOnToolsVersion = 15.2;
 					};
@@ -277,11 +334,20 @@
 				DDE7A6F12C572181007B6B37 /* LucasHints */,
 				DDE7A7012C572185007B6B37 /* LucasHintsTests */,
 				DDE7A70B2C572185007B6B37 /* LucasHintsUITests */,
+				DD9916E72C6CFDA1008465D1 /* StickerPack */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		DD9916E62C6CFDA1008465D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD9916EB2C6CFDA3008465D1 /* Stickers.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DDE7A6F02C572181007B6B37 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -344,6 +410,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		DD9916EE2C6CFDA3008465D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD9916E72C6CFDA1008465D1 /* StickerPack */;
+			targetProxy = DD9916ED2C6CFDA3008465D1 /* PBXContainerItemProxy */;
+		};
 		DDE7A7042C572185007B6B37 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = DDE7A6F12C572181007B6B37 /* LucasHints */;
@@ -357,6 +428,50 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		DD9916F12C6CFDA3008465D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K25K24NK79;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StickerPack/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Lucas Hints";
+				INFOPLIST_KEY_NSStickerSharingLevel = Messages;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aaronkrauss.lucashints.StickerPack;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DD9916F22C6CFDA3008465D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K25K24NK79;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StickerPack/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Lucas Hints";
+				INFOPLIST_KEY_NSStickerSharingLevel = Messages;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aaronkrauss.lucashints.StickerPack;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		DDE7A7142C572185007B6B37 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -483,7 +598,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"LucasHints/Preview Content\"";
 				DEVELOPMENT_TEAM = K25K24NK79;
 				ENABLE_PREVIEWS = YES;
@@ -517,7 +632,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"LucasHints/Preview Content\"";
 				DEVELOPMENT_TEAM = K25K24NK79;
 				ENABLE_PREVIEWS = YES;
@@ -623,6 +738,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		DD9916F02C6CFDA3008465D1 /* Build configuration list for PBXNativeTarget "StickerPack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD9916F12C6CFDA3008465D1 /* Debug */,
+				DD9916F22C6CFDA3008465D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		DDE7A6ED2C572181007B6B37 /* Build configuration list for PBXProject "LucasHints" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

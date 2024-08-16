@@ -14,9 +14,18 @@ struct InfoSheet: View {
         NavigationView {
             ScrollView {
                 VStack(alignment: .leading) {
-                    Text("Welcome!")
-                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 15, trailing: 0))
+                    HStack(alignment: .center) {
+                        Text("Welcome!")
+                            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+
+                        Text("iMessage stickers included")
+                            .fontWeight(.semibold)
+                            .font(.system(size: 10))
+                            .padding(EdgeInsets(top: 4, leading: 8, bottom: 4, trailing: 8))
+                            .foregroundColor(.white)
+                            .background(.blue)
+                            .cornerRadius(10)
+                    }.padding(EdgeInsets(top: 0, leading: 0, bottom: 15, trailing: 0))
 
                     Text(
                         LocalizedStringKey(

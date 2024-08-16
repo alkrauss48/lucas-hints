@@ -1,0 +1,119 @@
+{
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "grid-size" : "small"
+  },
+  "stickers" : [
+    {
+      "filename" : "beach.sticker"
+    },
+    {
+      "filename" : "cave.sticker"
+    },
+    {
+      "filename" : "trees.sticker"
+    },
+    {
+      "filename" : "waterfall.sticker"
+    },
+    {
+      "filename" : "handshake.sticker"
+    },
+    {
+      "filename" : "clapping.sticker"
+    },
+    {
+      "filename" : "thumbs-up.sticker"
+    },
+    {
+      "filename" : "thumbs-down.sticker"
+    },
+    {
+      "filename" : "hammer.sticker"
+    },
+    {
+      "filename" : "wand.sticker"
+    },
+    {
+      "filename" : "diamond.sticker"
+    },
+    {
+      "filename" : "shop.sticker"
+    },
+    {
+      "filename" : "turtle.sticker"
+    },
+    {
+      "filename" : "bear.sticker"
+    },
+    {
+      "filename" : "dog.sticker"
+    },
+    {
+      "filename" : "fish.sticker"
+    },
+    {
+      "filename" : "birthday-cake.sticker"
+    },
+    {
+      "filename" : "trophy.sticker"
+    },
+    {
+      "filename" : "party-hat.sticker"
+    },
+    {
+      "filename" : "money.sticker"
+    },
+    {
+      "filename" : "melting.sticker"
+    },
+    {
+      "filename" : "sweat-smile.sticker"
+    },
+    {
+      "filename" : "laughing.sticker"
+    },
+    {
+      "filename" : "go-slow.sticker"
+    },
+    {
+      "filename" : "nuclear.sticker"
+    },
+    {
+      "filename" : "go.sticker"
+    },
+    {
+      "filename" : "stop.sticker"
+    },
+    {
+      "filename" : "expressionless.sticker"
+    },
+    {
+      "filename" : "corn.sticker"
+    },
+    {
+      "filename" : "milk.sticker"
+    },
+    {
+      "filename" : "apple.sticker"
+    },
+    {
+      "filename" : "beer.sticker"
+    },
+    {
+      "filename" : "star.sticker"
+    },
+    {
+      "filename" : "sun.sticker"
+    },
+    {
+      "filename" : "ice.sticker"
+    },
+    {
+      "filename" : "leaf.sticker"
+    }
+  ]
+}
