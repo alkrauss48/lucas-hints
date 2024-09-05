@@ -40,7 +40,12 @@ private func seedAnimal() -> Category {
             Glyph(assetName: "monkey"),
             Glyph(assetName: "dog"),
             Glyph(assetName: "pig"),
-            Glyph(assetName: "turtle")
+            Glyph(assetName: "turtle"),
+            Glyph(assetName: "chicken"),
+            Glyph(assetName: "dinosaur"),
+            Glyph(assetName: "duck"),
+            Glyph(assetName: "elephant"),
+            Glyph(assetName: "raccoon")
         ]
     )
 }
@@ -73,7 +78,7 @@ private func seedElemental() -> Category {
             Glyph(assetName: "heart"),
             Glyph(assetName: "hourglass"),
             Glyph(assetName: "ice"),
-            Glyph(assetName: "idea"),
+            Glyph(assetName: "light-bulb"),
             Glyph(assetName: "leaf"),
             Glyph(assetName: "lightning"),
             Glyph(assetName: "pentagram"),
@@ -97,7 +102,12 @@ private func seedEmotion() -> Category {
             Glyph(assetName: "laughing"),
             Glyph(assetName: "melting"),
             Glyph(assetName: "surprised"),
-            Glyph(assetName: "sweat-smile")
+            Glyph(assetName: "sweat-smile"),
+            Glyph(assetName: "halo"),
+            Glyph(assetName: "sad"),
+            Glyph(assetName: "star-struck"),
+            Glyph(assetName: "upside-down-smile"),
+            Glyph(assetName: "winking")
         ]
     )
 }
@@ -116,7 +126,12 @@ private func seedFood() -> Category {
             Glyph(assetName: "milk"),
             Glyph(assetName: "rice-bowl"),
             Glyph(assetName: "water-cup"),
-            Glyph(assetName: "wine")
+            Glyph(assetName: "wine"),
+            Glyph(assetName: "cheese"),
+            Glyph(assetName: "cookie"),
+            Glyph(assetName: "ice-cream"),
+            Glyph(assetName: "strawberry"),
+            Glyph(assetName: "teapot")
         ]
     )
 }
@@ -211,7 +226,12 @@ private func seedInventory() -> Category {
             Glyph(assetName: "lantern"),
             Glyph(assetName: "logs"),
             Glyph(assetName: "potion"),
-            Glyph(assetName: "pen")
+            Glyph(assetName: "pen"),
+            Glyph(assetName: "bone"),
+            Glyph(assetName: "box"),
+            Glyph(assetName: "flag"),
+            Glyph(assetName: "key"),
+            Glyph(assetName: "umbrella")
         ]
     )
 }
