@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @StateObject var appState = AppState()
     @State private var isPresentingInfo = false
+    @State private var isPresentingAllGlyphs = false
     @State private var isShuffling = false
     @State private var slideOffset: CGFloat = 0
     @State private var tileOpacity: Double = 1
@@ -30,14 +31,27 @@ struct ContentView: View {
                 }
                 .frame(maxWidth: .infinity)
                 .toolbar {
-                    Button(action: {
-                        isPresentingInfo.toggle()
-                    }, label: {
-                        Image(systemName: "info.circle")
-                    })
+                    ToolbarItemGroup(placement: .navigationBarTrailing) {
+                        Button(action: {
+                            isPresentingAllGlyphs.toggle()
+                        }, label: {
+                            Image(systemName: "square.grid.3x3")
+                        })
+                        .accessibilityLabel("All icons")
+                        .accessibilityIdentifier("allIconsButton")
+
+                        Button(action: {
+                            isPresentingInfo.toggle()
+                        }, label: {
+                            Image(systemName: "info.circle")
+                        })
+                    }
                 }
                 .sheet(isPresented: $isPresentingInfo) {
                     InfoSheet(isPresented: $isPresentingInfo)
+                }
+                .sheet(isPresented: $isPresentingAllGlyphs) {
+                    AllGlyphsSheet(isPresented: $isPresentingAllGlyphs, categories: appState.categories)
                 }
             }
         }
