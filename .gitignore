@@ -1,0 +1,32 @@
+# macOS
+.DS_Store
+
+# Xcode — per-user state (window layout, breakpoints, scheme ordering)
+xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+*.xccheckout
+
+# Xcode — build output
+build/
+DerivedData/
+*.xcresult
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Swift Package Manager (not currently used, but kept clean if added)
+.build/
+.swiftpm/
+Packages/
+Package.resolved
+
+# Fastlane (not currently used)
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+
+# Claude Code — personal settings stay local; shared settings in .claude/settings.json are committed
+.claude/settings.local.json
+CLAUDE.local.md
