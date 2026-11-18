@@ -77,3 +77,6 @@ To add an icon, add its SVG imageset under `Assets.xcassets/glyphs/<category>/` 
 This repo is set up for AI coding agents:
 - [`CLAUDE.md`](CLAUDE.md) (also available as `AGENTS.md`) covers the architecture, commands, conventions, and gotchas that agents such as Claude Code read automatically.
 - [`.claude/settings.json`](.claude/settings.json) pre-approves the read-only and build commands (lint, build, test, git inspection) shared by everyone working in the repo. Put personal overrides in `.claude/settings.local.json`, which is git-ignored.
+
+## License
+Lucas Hints is released under the [MIT License](LICENSE).
