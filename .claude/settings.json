@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Bash(swiftlint:*)",
+      "Bash(xcodebuild -list:*)",
+      "Bash(xcodebuild -showdestinations:*)",
+      "Bash(xcodebuild -project LucasHints.xcodeproj:*)",
+      "Bash(DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer xcodebuild:*)",
+      "Bash(xcrun simctl list:*)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git show:*)"
+    ]
+  }
+}

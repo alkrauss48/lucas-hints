@@ -6,8 +6,34 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v5
       - name: GitHub Action for SwiftLint with --strict
         uses: norio-nomura/action-swiftlint@3.2.1
         with:
           args: --strict
+
+  test:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Pick an available iPhone simulator
+        id: sim
+        run: |
+          UDID=$(xcrun simctl list devices available -j | python3 -c '
+          import json, re, sys
+          devices = json.load(sys.stdin)["devices"]
+          ios = sorted(
+              (k for k in devices if ".iOS-" in k),
+              key=lambda k: [int(n) for n in re.findall(r"\d+", k.split(".iOS-")[1])],
+              reverse=True,
+          )
+          print(next(d["udid"] for k in ios for d in devices[k] if d["name"].startswith("iPhone")))
+          ')
+          echo "udid=$UDID" >> "$GITHUB_OUTPUT"
+      - name: Build and run unit tests
+        run: |
+          xcodebuild -project LucasHints.xcodeproj -scheme LucasHints \
+            -destination "id=${{ steps.sim.outputs.udid }}" \
+            -only-testing:LucasHintsTests \
+            CODE_SIGNING_ALLOWED=NO \
+            test
