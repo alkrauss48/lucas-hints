@@ -90,7 +90,9 @@ struct ContentView: View {
 
     func tile(_ uiGlyph: UIGlyph, width: CGFloat) -> some View {
         GlyphDetails(width: width * 0.3, uiGlyph: uiGlyph)
-            .rotation3DEffect(.degrees(flipAngle), axis: (x: 0, y: 1, z: 0))
+            // A perspective of 0 keeps the flip flat: the tile narrows to its center
+            // line and back, without the near edge ballooning toward the viewer.
+            .rotation3DEffect(.degrees(flipAngle), axis: (x: 0, y: 1, z: 0), perspective: 0)
             .opacity(tileOpacity)
     }
 
