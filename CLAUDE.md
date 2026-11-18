@@ -8,7 +8,7 @@ Lucas Hints is a small SwiftUI iOS app (iOS 17+, iPhone and iPad) that shows 3 r
 
 ## Commands
 
-The machine's active developer directory may point at Command Line Tools instead of Xcode. If `xcodebuild` reports "requires Xcode", prefix commands with `DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer`. Building also requires the iOS platform and a simulator runtime (Xcode > Settings > Components).
+The machine's active developer directory may point at Command Line Tools instead of Xcode. If `xcodebuild` reports "requires Xcode", prefix commands with `DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer`. Building also requires the iOS platform and a simulator runtime. Install them with `xcodebuild -downloadPlatform iOS` or from Xcode > Settings > Components. Simulator device names change with each Xcode release, so if `iPhone 17` doesn't exist, choose a name from `xcrun simctl list devices available`.
 
 ```sh
 # Lint (CI runs this with --strict, so warnings fail the build)
@@ -16,11 +16,11 @@ swiftlint --strict
 
 # Build the app
 xcodebuild -project LucasHints.xcodeproj -scheme LucasHints \
-  -destination 'platform=iOS Simulator,name=iPhone 16' build
+  -destination 'platform=iOS Simulator,name=iPhone 17' build
 
 # Run unit tests only (fast)
 xcodebuild -project LucasHints.xcodeproj -scheme LucasHints \
-  -destination 'platform=iOS Simulator,name=iPhone 16' \
+  -destination 'platform=iOS Simulator,name=iPhone 17' \
   -only-testing:LucasHintsTests test
 
 # Run one test
@@ -57,6 +57,7 @@ To check that every seeded name has an asset (and the reverse), compare `grep -o
 
 - **New Swift files must be registered in `LucasHints.xcodeproj/project.pbxproj`.** This project uses classic groups (objectVersion 56), not folder-synchronized groups, so a file created on disk is not compiled until it's added to the target. Prefer adding files through Xcode. If you edit the pbxproj by hand, add matching `PBXFileReference`, `PBXBuildFile`, group child, and `PBXSourcesBuildPhase` entries with unique 24-character hex IDs. Files inside `.xcassets` do **not** need pbxproj changes.
 - Don't hand-reformat `project.pbxproj`, `.xcscheme`, or `.plist` files.
+- The shared `LucasHints.xcscheme` must list `LucasHintsTests` and `LucasHintsUITests` under `<Testables>`, or `xcodebuild test` fails with "Scheme LucasHints is not currently configured for the test action" (Xcode's GUI hides this). Recreating or editing the scheme in Xcode can drop them.
 - `AppState` is created per view via `@StateObject`. There is intentionally no singleton.
 - CI (`.github/workflows/swift.yml`) runs on every push with two jobs: `lint` (SwiftLint `--strict`) and `test` (builds the app and runs `LucasHintsTests` on a macOS runner). UI tests are not run in CI.
 

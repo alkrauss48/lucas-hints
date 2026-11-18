@@ -31,9 +31,11 @@ Select the `LucasHints` scheme and run it on an iOS Simulator or your own device
 To build from the command line:
 ```sh
 xcodebuild -project LucasHints.xcodeproj -scheme LucasHints \
-  -destination 'platform=iOS Simulator,name=iPhone 16' build
+  -destination 'platform=iOS Simulator,name=iPhone 17' build
 ```
 
+> Simulator names change between Xcode versions. If `iPhone 17` isn't found, choose one from `xcrun simctl list devices available`. If no simulators are installed, run `xcodebuild -downloadPlatform iOS`.
+>
 > If `xcodebuild` says it "requires Xcode", your active developer directory points at the Command Line Tools. Fix it with `sudo xcode-select -s /Applications/Xcode.app`, or prefix commands with `DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer`.
 
 ## To Lint
@@ -48,12 +50,12 @@ Tests are written with [XCTest](https://developer.apple.com/documentation/XCTest
 ```sh
 # Unit tests only
 xcodebuild -project LucasHints.xcodeproj -scheme LucasHints \
-  -destination 'platform=iOS Simulator,name=iPhone 16' \
+  -destination 'platform=iOS Simulator,name=iPhone 17' \
   -only-testing:LucasHintsTests test
 
 # Everything, including UI tests
 xcodebuild -project LucasHints.xcodeproj -scheme LucasHints \
-  -destination 'platform=iOS Simulator,name=iPhone 16' test
+  -destination 'platform=iOS Simulator,name=iPhone 17' test
 ```
 
 ## Project Layout
