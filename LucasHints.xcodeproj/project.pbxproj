@@ -23,6 +23,7 @@
 		DDE7A72C2C5BD5BA007B6B37 /* GlyphDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE7A72B2C5BD5BA007B6B37 /* GlyphDetails.swift */; };
 		DDE7A72E2C5BD822007B6B37 /* UIGlyph.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE7A72D2C5BD822007B6B37 /* UIGlyph.swift */; };
 		DDE7A7302C5C0110007B6B37 /* InfoSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE7A72F2C5C0110007B6B37 /* InfoSheet.swift */; };
+		F9CC8190BECEFAE2CF2DE247 /* AllGlyphsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73AB90FB0D99A682A6EB6DF1 /* AllGlyphsSheet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		DDE7A72B2C5BD5BA007B6B37 /* GlyphDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlyphDetails.swift; sourceTree = "<group>"; };
 		DDE7A72D2C5BD822007B6B37 /* UIGlyph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGlyph.swift; sourceTree = "<group>"; };
 		DDE7A72F2C5C0110007B6B37 /* InfoSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoSheet.swift; sourceTree = "<group>"; };
+		73AB90FB0D99A682A6EB6DF1 /* AllGlyphsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGlyphsSheet.swift; sourceTree = "<group>"; };
 		DDE7A7312C5C7D9E007B6B37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -215,6 +217,7 @@
 			children = (
 				DDE7A72B2C5BD5BA007B6B37 /* GlyphDetails.swift */,
 				DDE7A72F2C5C0110007B6B37 /* InfoSheet.swift */,
+				73AB90FB0D99A682A6EB6DF1 /* AllGlyphsSheet.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 				DDE7A7212C5BCF62007B6B37 /* Category.swift in Sources */,
 				DDE7A7292C5BD46F007B6B37 /* CategorySeeder.swift in Sources */,
 				DDE7A7302C5C0110007B6B37 /* InfoSheet.swift in Sources */,
+				F9CC8190BECEFAE2CF2DE247 /* AllGlyphsSheet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

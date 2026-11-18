@@ -6,7 +6,9 @@
 
 Welcome! Lucas Hints is an incredibly simple iOS app designed to provide you with a little bit of guidance when you need it - without telling you the whole story.
 
-Wondering what to do next in your creative storytelling experience, or do you need a bit of advice with some real life decisions? Lucas Hints will help by giving you 3 unique icons across different categories. Want a fresh set? Just pull down to refresh - there's over 400,000 unique combinations of icons!
+Wondering what to do next in your creative storytelling experience, or do you need a bit of advice with some real life decisions? Lucas Hints will help by giving you 3 unique icons across different categories. Want a fresh set? Just tap **New Hints** - there's over 400,000 unique combinations of icons!
+
+Want to see every icon at once? Tap the grid button in the top corner to browse all of them as small thumbnails, grouped and color-coded by category. It's a quick way for a parent to review everything the app can show.
 
 What do the icons actually mean? That's for you to interpret and decide! Now get out there and have some fun, and let your creativity flourish!
 
@@ -62,11 +64,11 @@ xcodebuild -project LucasHints.xcodeproj -scheme LucasHints \
 ```
 LucasHints/
 ├── LucasHintsApp.swift          # App entry point
-├── ContentView.swift            # Root view: glyph layout, pull-to-refresh, info button
+├── ContentView.swift            # Root view: glyph layout, New Hints button, All Icons and info buttons
 ├── Models/                      # Category, Glyph, UIGlyph
 ├── Seeders/CategorySeeder.swift # The full catalog of categories and their glyphs
 ├── State/AppState.swift         # Picks the 3 active glyphs
-├── Views/                       # GlyphDetails (one tile), InfoSheet (about sheet)
+├── Views/                       # GlyphDetails (one tile), InfoSheet (about), AllGlyphsSheet (every icon)
 └── Assets.xcassets/glyphs/      # SVG icons, one folder per category
 LucasHintsTests/                 # Unit tests
 LucasHintsUITests/               # UI tests

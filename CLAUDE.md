@@ -4,7 +4,7 @@ Guidance for AI coding agents (Claude Code, and others via `AGENTS.md`, which is
 
 ## What this is
 
-Lucas Hints is a small SwiftUI iOS app (iOS 17+, iPhone and iPad) that shows 3 random icons ("glyphs"), each from a different category, to spark creative storytelling. Pull to refresh draws a new set. It also ships an iMessage sticker pack as a second target. There are no third-party dependencies, no networking, no persistence, and no environment variables.
+Lucas Hints is a small SwiftUI iOS app (iOS 17+, iPhone and iPad) that shows 3 random icons ("glyphs"), each from a different category, to spark creative storytelling. Tapping the "New Hints" button draws a new set. It also ships an iMessage sticker pack as a second target. There are no third-party dependencies, no networking, no persistence, and no environment variables.
 
 ## Commands
 
@@ -39,8 +39,8 @@ The data flow runs in one direction and fits in a handful of files under `LucasH
 - `Seeders/CategorySeeder.swift`: `seedCategories()` returns the hard-coded catalog: 13 `Category` values, each with a name, a pastel `Color` (hue `n / 13.0`), and a list of `Glyph`s.
 - `Models/`: `Category`, `Glyph` (only an `assetName`), and `UIGlyph` (a glyph paired with its category). `UIGlyph` equality and hashing use **only** `glyph.assetName`.
 - `State/AppState.swift`: an `ObservableObject` that holds `activeGlyphs`. `regenerateUiGlyphs()` picks 3 distinct categories, takes one random glyph from each, and retries until none of the new glyphs were in the previous set.
-- `ContentView.swift`: the root view. It owns `AppState` via `@StateObject`, lays the glyphs out vertically or horizontally depending on orientation, provides pull to refresh, and has the info button.
-- `Views/GlyphDetails.swift`: one glyph tile. `Views/InfoSheet.swift`: the about sheet's copy.
+- `ContentView.swift`: the root view. It owns `AppState` via `@StateObject`, lays the glyphs out vertically or horizontally depending on orientation, has the "New Hints" button (which slides and fades the tiles out and back in, and stays disabled until the animation finishes, so sets can't be drawn in rapid succession), and has the All Icons (grid) and info toolbar buttons.
+- `Views/GlyphDetails.swift`: one glyph tile. `Views/InfoSheet.swift`: the about sheet's copy. `Views/AllGlyphsSheet.swift`: every glyph as a small thumbnail, grouped and color-coded by category (built from `appState.categories`, so new glyphs appear automatically).
 
 `StickerPack/` is a separate iMessage sticker target with its own PNG assets. It shares no code or assets with the app.
 
