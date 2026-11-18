@@ -11,7 +11,7 @@ struct ContentView: View {
     @StateObject var appState = AppState()
     @State private var isPresentingInfo = false
     @State private var isShuffling = false
-    @State private var flipAngle: Double = 0
+    @State private var slideOffset: CGFloat = 0
     @State private var tileOpacity: Double = 1
     @Environment(\.accessibilityReduceMotion) var reduceMotion
 
@@ -90,50 +90,38 @@ struct ContentView: View {
 
     func tile(_ uiGlyph: UIGlyph, width: CGFloat) -> some View {
         GlyphDetails(width: width * 0.3, uiGlyph: uiGlyph)
-            // A perspective of 0 keeps the flip flat: the tile narrows to its center
-            // line and back, without the near edge ballooning toward the viewer.
-            .rotation3DEffect(.degrees(flipAngle), axis: (x: 0, y: 1, z: 0), perspective: 0)
+            .offset(x: slideOffset)
             .opacity(tileOpacity)
     }
 
-    /// Draws a new set of glyphs. The tiles flip edge-on, the glyphs are swapped
-    /// while they're invisible, and then the tiles flip back into view. The button
+    /// Draws a new set of glyphs. The current tiles drift a little to the left
+    /// while fading out, the glyphs are swapped while they're invisible, and the
+    /// new tiles drift in from a little to the right while fading in. The button
     /// stays disabled until the animation finishes, so a new set can't be drawn
-    /// in rapid succession.
+    /// in rapid succession. With Reduce Motion on, the tiles only fade.
     func shuffle() {
         guard !isShuffling else { return }
         isShuffling = true
 
-        if reduceMotion {
-            withAnimation(.easeIn(duration: 0.2)) {
-                tileOpacity = 0
-            } completion: {
-                appState.regenerateUiGlyphs()
-                withAnimation(.easeOut(duration: 0.2)) {
-                    tileOpacity = 1
-                } completion: {
-                    isShuffling = false
-                }
-            }
-            return
-        }
+        let distance: CGFloat = reduceMotion ? 0 : 24
 
-        withAnimation(.easeIn(duration: 0.25)) {
-            flipAngle = 90
+        withAnimation(.easeIn(duration: 0.2)) {
+            slideOffset = -distance
+            tileOpacity = 0
         } completion: {
-            // Swap the glyphs and jump to the opposite edge without animating,
-            // so the flip keeps turning in the same direction.
+            // Swap the glyphs and move them to the right side without animating.
             var transaction = Transaction()
             transaction.disablesAnimations = true
             withTransaction(transaction) {
                 appState.regenerateUiGlyphs()
-                flipAngle = -90
+                slideOffset = distance
             }
 
-            // Wait a run loop tick so the jump renders before the flip back starts.
+            // Wait a run loop tick so the jump renders before the slide in starts.
             DispatchQueue.main.async {
-                withAnimation(.easeOut(duration: 0.3)) {
-                    flipAngle = 0
+                withAnimation(.easeOut(duration: 0.25)) {
+                    slideOffset = 0
+                    tileOpacity = 1
                 } completion: {
                     isShuffling = false
                 }
