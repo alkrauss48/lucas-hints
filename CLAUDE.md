@@ -58,12 +58,12 @@ To check that every seeded name has an asset (and the reverse), compare `grep -o
 - **New Swift files must be registered in `LucasHints.xcodeproj/project.pbxproj`.** This project uses classic groups (objectVersion 56), not folder-synchronized groups, so a file created on disk is not compiled until it's added to the target. Prefer adding files through Xcode. If you edit the pbxproj by hand, add matching `PBXFileReference`, `PBXBuildFile`, group child, and `PBXSourcesBuildPhase` entries with unique 24-character hex IDs. Files inside `.xcassets` do **not** need pbxproj changes.
 - Don't hand-reformat `project.pbxproj`, `.xcscheme`, or `.plist` files.
 - `AppState` is created per view via `@StateObject`. There is intentionally no singleton.
-- The root-level `Stickers.xcstickers.xcstickers/` folder is an empty leftover that no target references. The real sticker assets live in `StickerPack/Stickers.xcassets`.
+- CI (`.github/workflows/swift.yml`) runs on every push with two jobs: `lint` (SwiftLint `--strict`) and `test` (builds the app and runs `LucasHintsTests` on a macOS runner). UI tests are not run in CI.
 
 ## Conventions
 
 - Swift style is enforced by SwiftLint's default rules (there is no `.swiftlint.yml`). Lines are capped at 120 characters. Keep `--strict` clean.
 - 4-space indentation, and keep the Xcode-style file header comment on new Swift files.
 - Commit messages: `<type>: <summary>`, with the issue number when there is one, e.g. `feat: issue-1 - add new icon assets`. Types used: `feat`, `fix`, `refactor`, `chore`, `docs`, `test`, `ci`, `lint`, `release`.
-- Releases: bump `MARKETING_VERSION` and `CURRENT_PROJECT_VERSION` in the pbxproj and commit as `release: vX.Y.Z+<build>` (e.g. `release: v1.0.1+7`).
+- Releases: bump `MARKETING_VERSION` and `CURRENT_PROJECT_VERSION` in the pbxproj for **both** the `LucasHints` and `StickerPack` targets (the App Store expects the extension's version to match the app's), then commit as `release: vX.Y.Z+<build>` (e.g. `release: v1.0.1+7`).
 - Work on a branch and open a PR against `main`.

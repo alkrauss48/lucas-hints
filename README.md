@@ -44,7 +44,7 @@ swiftlint --strict
 ```
 
 ## Testing
-Tests are written with [XCTest](https://developer.apple.com/documentation/XCTest). Run them in Xcode (⌘U), or from the command line:
+Tests are written with [XCTest](https://developer.apple.com/documentation/XCTest). CI builds the app and runs the unit tests on every push. Run them in Xcode (⌘U), or from the command line:
 ```sh
 # Unit tests only
 xcodebuild -project LucasHints.xcodeproj -scheme LucasHints \
