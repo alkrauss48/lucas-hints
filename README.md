@@ -6,7 +6,7 @@
 
 Welcome! Lucas Hints is an incredibly simple iOS app designed to provide you with a little bit of guidance when you need it - without telling you the whole story.
 
-Wondering what to do next in your creative storytelling experience, or do you need a bit of advice with some real life decisions? Lucas Hints will help by giving you 3 unique icons across different categories. Want a fresh set? Just pull down to refresh - there's over 400,000 unique combinations of icons!
+Wondering what to do next in your creative storytelling experience, or do you need a bit of advice with some real life decisions? Lucas Hints will help by giving you 3 unique icons across different categories. Want a fresh set? Just tap **New Hints** - there's over 400,000 unique combinations of icons!
 
 What do the icons actually mean? That's for you to interpret and decide! Now get out there and have some fun, and let your creativity flourish!
 
@@ -62,7 +62,7 @@ xcodebuild -project LucasHints.xcodeproj -scheme LucasHints \
 ```
 LucasHints/
 ├── LucasHintsApp.swift          # App entry point
-├── ContentView.swift            # Root view: glyph layout, pull-to-refresh, info button
+├── ContentView.swift            # Root view: glyph layout, New Hints shuffle button, info button
 ├── Models/                      # Category, Glyph, UIGlyph
 ├── Seeders/CategorySeeder.swift # The full catalog of categories and their glyphs
 ├── State/AppState.swift         # Picks the 3 active glyphs
